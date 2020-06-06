@@ -1,0 +1,45 @@
+body {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+.main {
+  width: 500px;
+  margin: 15px auto;
+  &-title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 7px;
+  }
+  .question {
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    h1 {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+  .answer {
+    padding: 7px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  #btn {
+    width: 100px;
+    background-color: #0af;
+    padding: 7px;
+    border-radius: 5px;
+    box-shadow: 0 4px 0 #08c;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+}
