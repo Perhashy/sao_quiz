@@ -7,6 +7,9 @@
   </head>
   <body>
     <div class="main">
+      <div class="main-title">
+        SAOクイズ！
+      </div>
       <div class="question">
         <h1>問題.1</h1>
         <h1>問題文</h1>
