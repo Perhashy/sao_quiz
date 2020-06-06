@@ -6,6 +6,18 @@
     <link rel="stylesheet" href="styles.scss">
   </head>
   <body>
-    <h1>SAOクイズ!</h1>
+    <div class="main">
+      <div class="question">
+        <h1>問題.1</h1>
+        <h1>問題文</h1>
+      </div>
+      <ul>
+        <li class="answer">答え</li>
+        <li class="answer">答え</li>
+        <li class="answer">答え</li>
+        <li class="answer">答え</li>
+      </ul>
+      <div id="btn">次の問題へ</div>
+    </div>
   </body>
 </html>
