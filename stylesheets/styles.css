@@ -1,0 +1,11 @@
+.main {
+  width: 500px;
+  margin: 15px auto;
+}
+
+.main .question {
+  width: 500px;
+  height: 100px;
+  border: 1px solid;
+}
+/*# sourceMappingURL=styles.css.map */

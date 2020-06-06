@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>SAOクイズ</title>
-    <link rel="stylesheet" href="stylesheets/application.scss">
+    <link rel="stylesheet" href="stylesheets/application.css">
   </head>
   <body>
     <div class="main">
