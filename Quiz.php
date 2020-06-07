@@ -16,6 +16,9 @@ class Quiz {
 
   public function correctAnswer() {
     $correctAnswer = $this->_quizSet[$_SESSION['current_question']]['a'][0];
+    if ($correctAnswer === $_POST['answer']) {
+      $_SESSION['correct_count']++;
+    }
     $_SESSION['current_question']++;
     return $correctAnswer;
   }
