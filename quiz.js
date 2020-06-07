@@ -28,4 +28,9 @@ $(function() {
       $('#btn').removeClass('disabled');
     });
   });
+  $('#btn').on('click', function(){
+    if (!$(this).hasClass('disabled')) {
+      location.reload();
+    }
+  });
 });
