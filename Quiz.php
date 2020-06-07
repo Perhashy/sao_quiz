@@ -19,8 +19,8 @@ class Quiz {
     return $correctAnswer;
   }
 
-  public function isFinished() {
-    return count($this->_quizSet) === $_SESSION['current_question'];
+  public function isFinished($question_count) {
+    return $question_count === $_SESSION['current_question'];
   }
 
   public function reset() {

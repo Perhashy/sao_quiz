@@ -3,9 +3,11 @@
 require_once(__DIR__ . '/config.php');
 require_once(__DIR__ . '/Quiz.php');
 
+$question_count = 2;
+
 $quiz = new MyApp\Quiz();
 
-if (!$quiz->isFinished()) {
+if (!$quiz->isFinished($question_count)) {
   $data = $quiz->getCurrentQuiz();
   shuffle($data['a']);
 }
@@ -24,7 +26,7 @@ if (!$quiz->isFinished()) {
       <div class="main-title">
         SAOクイズ！
       </div>
-      <?php if ($quiz->isFinished()) : ?>
+      <?php if ($quiz->isFinished($question_count)) : ?>
         <a href="">もう一度遊ぶ</a>
         <?php $quiz->reset(); ?>
       <?php else : ?>
