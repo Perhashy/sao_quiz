@@ -21,6 +21,9 @@ class Quiz {
 
   public function correctAnswer() {
     $correctAnswer = $this->_quizSet[$_SESSION['current_question']]['a'][0];
+    if (!isset($_POST['answer'])) {
+      throw new \Exception('answer not set!');
+    }
     if ($correctAnswer === $_POST['answer']) {
       $_SESSION['correct_count']++;
     }
