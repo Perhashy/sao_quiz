@@ -1,8 +1,6 @@
 <?php
 
 require_once(__DIR__ . '/config.php');
-require_once(__DIR__ . '/Quiz.php');
-require_once(__DIR__ . '/Token.php');
 
 $question_count = 2;
 
