@@ -25,6 +25,8 @@ if (!$quiz->isFinished()) {
         SAOクイズ！
       </div>
       <?php if ($quiz->isFinished()) : ?>
+        <a href="">もう一度遊ぶ</a>
+        <?php $quiz->reset(); ?>
       <?php else : ?>
         <div class="question">
           <h1>問題.<?= $_SESSION['current_question'] + 1; ?></h1>
