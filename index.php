@@ -3,6 +3,10 @@
 require_once(__DIR__ . '/config.php');
 require_once(__DIR__ . '/Quiz.php');
 
+$quiz = new MyApp\Quiz();
+
+$data = $quiz->getCurrentQuiz();
+shuffle($data['a']);
 ?>
 
 
@@ -19,14 +23,13 @@ require_once(__DIR__ . '/Quiz.php');
         SAOクイズ！
       </div>
       <div class="question">
-        <h1>問題.1</h1>
-        <h1>問題文</h1>
+        <h1>問題.<?= $_SESSION['current_question'] + 1; ?></h1>
+        <h1><?= h($data['q']); ?></h1>
       </div>
       <ul>
-        <li class="answer">答え</li>
-        <li class="answer">答え</li>
-        <li class="answer">答え</li>
-        <li class="answer">答え</li>
+        <?php foreach ($data['a'] as $a) : ?>
+          <li class="answer"><?= h($a); ?></li>
+        <?php endforeach ?>
       </ul>
       <div id="btn">次の問題へ</div>
     </div>
