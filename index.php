@@ -43,7 +43,7 @@ if (!$quiz->isFinished($question_count)) {
             <li class="answer"><?= h($a); ?></li>
           <?php endforeach ?>
         </ul>
-        <div id="btn" class="disabled">次の問題へ</div>
+        <div id="btn" class="disabled"><?= $quiz->isLast($question_count) ? '結果を見る' : '次の問題へ'; ?></div>
       </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="quiz.js"></script>

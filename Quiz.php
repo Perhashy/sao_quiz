@@ -23,6 +23,10 @@ class Quiz {
     return $question_count === $_SESSION['current_question'];
   }
 
+  public function isLast($question_count) {
+    return $question_count === $_SESSION['current_question'] + 1;
+  }
+
   public function reset() {
     $_SESSION['current_question'] = 0;
   }
