@@ -183,6 +183,20 @@ body {
   cursor: pointer;
 }
 
+.main .correct {
+  color: limegreen;
+  font-weight: bold;
+}
+
+.main .wrong {
+  color: lightgray;
+}
+
+.main .select-wrong {
+  color: red;
+  font-weight: bold;
+}
+
 .main #btn {
   width: 100px;
   background-color: #0af;
@@ -196,5 +210,9 @@ body {
   color: #fff;
   cursor: pointer;
   margin: 0 auto;
+}
+
+.main .disabled {
+  opacity: 0.5;
 }
 /*# sourceMappingURL=application.css.map */

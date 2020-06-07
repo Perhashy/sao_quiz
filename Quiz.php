@@ -13,6 +13,11 @@ class Quiz {
     }
   }
 
+  public function correctAnswer() {
+    $correctAnswer = $this->_quizSet[$_SESSION['current_question']]['a'][0];
+    return $correctAnswer;
+  }
+
   public function getCurrentQuiz() {
     return $this->_quizSet[$_SESSION['current_question']];
   }
