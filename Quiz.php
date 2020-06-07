@@ -9,9 +9,14 @@ class Quiz {
   public function __construct() {
     $this->_setup();
     if (!isset($_SESSION['current_question'])) {
-      $_SESSION['current_question'] = 0;
-      $_SESSION['correct_count'] = 0;
+      $this->_initSession();
     }
+  }
+
+  private function _initSession() {
+    $_SESSION['current_question'] = 0;
+    $_SESSION['correct_count'] = 0;
+
   }
 
   public function correctAnswer() {
@@ -36,8 +41,7 @@ class Quiz {
   }
 
   public function reset() {
-    $_SESSION['current_question'] = 0;
-    $_SESSION['correct_count'] = 0;
+    $this->_initSession();
   }
 
   public function getCurrentQuiz() {
