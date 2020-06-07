@@ -2,6 +2,8 @@ $(function() {
   'user strict';
 
   $('.answer').on('click', function(){
-    console.log("hoge");
-  })
+    var $selected = $(this);
+    var answer = $selected.text()
+    console.log(answer);
+  });
 });
