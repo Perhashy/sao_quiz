@@ -215,4 +215,22 @@ body {
 .main .disabled {
   opacity: 0.5;
 }
+
+.main .result {
+  padding: 30px 0 50px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.main .result .score {
+  font-size: 64px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.main .btn {
+  text-decoration: none;
+}
 /*# sourceMappingURL=application.css.map */

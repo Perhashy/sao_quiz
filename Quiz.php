@@ -9,12 +9,21 @@ class Quiz {
   public function __construct() {
     $this->_setup();
     if (!isset($_SESSION['current_question'])) {
-      $_SESSION['current_question'] = 0;
+      $this->_initSession();
     }
+  }
+
+  private function _initSession() {
+    $_SESSION['current_question'] = 0;
+    $_SESSION['correct_count'] = 0;
+
   }
 
   public function correctAnswer() {
     $correctAnswer = $this->_quizSet[$_SESSION['current_question']]['a'][0];
+    if ($correctAnswer === $_POST['answer']) {
+      $_SESSION['correct_count']++;
+    }
     $_SESSION['current_question']++;
     return $correctAnswer;
   }
@@ -23,8 +32,16 @@ class Quiz {
     return $question_count === $_SESSION['current_question'];
   }
 
+  public function getScore($question_count) {
+    return round($_SESSION['correct_count'] / $question_count * 100);
+  }
+
+  public function isLast($question_count) {
+    return $question_count === $_SESSION['current_question'] + 1;
+  }
+
   public function reset() {
-    $_SESSION['current_question'] = 0;
+    $this->_initSession();
   }
 
   public function getCurrentQuiz() {
