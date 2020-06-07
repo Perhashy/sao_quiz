@@ -211,4 +211,8 @@ body {
   cursor: pointer;
   margin: 0 auto;
 }
+
+.main .disabled {
+  opacity: 0.5;
+}
 /*# sourceMappingURL=application.css.map */

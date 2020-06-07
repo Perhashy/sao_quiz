@@ -25,6 +25,7 @@ $(function() {
       } else {
         $selected.text(answer + ' ...不正解(´・ω・`)').addClass('select-wrong');
       }
+      $('#btn').removeClass('disabled');
     });
   });
 });
