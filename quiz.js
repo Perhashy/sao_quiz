@@ -3,6 +3,9 @@ $(function() {
 
   $('.answer').on('click', function(){
     var $selected = $(this);
+    if ($selected.hasClass('correct') || $selected.hasClass('wrong')) {
+      return;
+    }
     $selected.addClass('selected');
     var answer = $selected.text();
     console.log(answer);
