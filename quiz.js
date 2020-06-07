@@ -3,7 +3,11 @@ $(function() {
 
   $('.answer').on('click', function(){
     var $selected = $(this);
-    var answer = $selected.text()
+    var answer = $selected.text();
     console.log(answer);
+
+    $.post('/answer.php', {
+
+    })
   });
 });
