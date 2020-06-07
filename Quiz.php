@@ -15,7 +15,16 @@ class Quiz {
 
   public function correctAnswer() {
     $correctAnswer = $this->_quizSet[$_SESSION['current_question']]['a'][0];
+    $_SESSION['current_question']++;
     return $correctAnswer;
+  }
+
+  public function isFinished() {
+    return count($this->_quizSet) === $_SESSION['current_question'];
+  }
+
+  public function reset() {
+    $_SESSION['current_question'] = 0;
   }
 
   public function getCurrentQuiz() {
@@ -35,6 +44,5 @@ class Quiz {
       'q' => 'キリトとアスナが買ったログハウスは何層にある？',
       'a' => ['22層', '24層', '21層', '18層']
     ];
-
   }
 }
