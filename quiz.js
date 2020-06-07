@@ -6,8 +6,14 @@ $(function() {
     var answer = $selected.text();
     console.log(answer);
 
-    $.post('/answer.php', {
-
-    })
+    $.post('/_answer.php', {
+      
+    }).done(function(res) {
+      if (answer === res.correct_answer) {
+        $selected.text(answer + ' ...正解！👍');
+      } else {
+      $selected.text(answer + ' ...不正解(´・ω・`)');
+      }
+    });
   });
 });
