@@ -1,7 +1,6 @@
 <?php
 
 require_once(__DIR__ . '/config.php');
-require_once(__DIR__ . '/Quiz.php');
 
 $question_count = 2;
 
@@ -44,6 +43,7 @@ if (!$quiz->isFinished($question_count)) {
           <?php endforeach ?>
         </ul>
         <div id="btn" class="disabled"><?= $quiz->isLast($question_count) ? '結果を見る' : '次の問題へ'; ?></div>
+        <input type="hidden" id="token" value="<?= h($_SESSION['token']); ?>">
       </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="quiz.js"></script>

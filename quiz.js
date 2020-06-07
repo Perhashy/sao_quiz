@@ -11,7 +11,8 @@ $(function() {
     console.log(answer);
 
     $.post('/_answer.php', {
-      answer: answer
+      answer: answer,
+      token: $('#token').val()
     }).done(function(res) {
       $('.answer').each(function(){
         if ($(this).text() === res.correct_answer) {
