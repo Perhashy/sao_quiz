@@ -29,9 +29,9 @@ if (!$quiz->isFinished($question_count)) {
       <?php if ($quiz->isFinished($question_count)) : ?>
         <div class="result">
           正答率！
-          <div>100%</div>
-          <a href=""><div id="btn">もう一度遊ぶ</div></a>
+          <div class="score">100%</div>
         </div>
+        <a href="" class="btn"><div id="btn">もう一度遊ぶ</div></a>
         <?php $quiz->reset(); ?>
       <?php else : ?>
         <div class="question">
