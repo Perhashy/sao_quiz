@@ -10,6 +10,7 @@ class Quiz {
     $this->_setup();
     if (!isset($_SESSION['current_question'])) {
       $_SESSION['current_question'] = 0;
+      $_SESSION['correct_count'] = 0;
     }
   }
 
@@ -23,12 +24,17 @@ class Quiz {
     return $question_count === $_SESSION['current_question'];
   }
 
+  public function getScore($question_count) {
+    return round($_SESSION['correct_count'] / $question_count * 100);
+  }
+
   public function isLast($question_count) {
     return $question_count === $_SESSION['current_question'] + 1;
   }
 
   public function reset() {
     $_SESSION['current_question'] = 0;
+    $_SESSION['correct_count'] = 0;
   }
 
   public function getCurrentQuiz() {
