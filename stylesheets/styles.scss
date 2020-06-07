@@ -29,6 +29,17 @@ body {
     margin-bottom: 10px;
     cursor: pointer;
   }
+  .correct {
+    color: limegreen;
+    font-weight: bold;
+  }
+  .wrong {
+    color: lightgray;
+  }
+  .select-wrong {
+    color: red;
+    font-weight: bold;
+  }
   #btn {
     width: 100px;
     background-color: #0af;

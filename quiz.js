@@ -10,7 +10,7 @@ $(function() {
     $.post('/_answer.php', {
       
     }).done(function(res) {
-      $('answer').each(function(){
+      $('.answer').each(function(){
         if ($(this).text() === res.correct_answer) {
           $(this).addClass('correct');
         } else {
@@ -20,7 +20,7 @@ $(function() {
       if (answer === res.correct_answer) {
         $selected.text(answer + ' ...正解！👍');
       } else {
-      $selected.text(answer + ' ...不正解(´・ω・`)');
+        $selected.text(answer + ' ...不正解(´・ω・`)').addClass('select-wrong');
       }
     });
   });
