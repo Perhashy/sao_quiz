@@ -17,12 +17,20 @@ class Quiz {
   private function _initSession() {
     $_SESSION['current_question'] = 0;
     $_SESSION['correct_count'] = 0;
+  }
 
+  private function questionRandom() {
+    $question_num = random_int(0, 2);
+    $_SESSION['question_num'] = $question_num;
+  }
+
+  public function random() {
+    $this->questionRandom();
   }
 
   public function correctAnswer() {
     Token::validate('token');
-    $correctAnswer = $this->_quizSet[$_SESSION['current_question']]['a'][0];
+    $correctAnswer = $this->_quizSet[$_SESSION['question_num']]['a'][0];
     if (!isset($_POST['answer'])) {
       throw new \Exception('answer not set!');
     }
@@ -50,7 +58,7 @@ class Quiz {
   }
 
   public function getCurrentQuiz() {
-    return $this->_quizSet[$_SESSION['current_question']];
+    return $this->_quizSet[$_SESSION['question_num']];
   }
 
   private function _setup() {
