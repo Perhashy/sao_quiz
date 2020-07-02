@@ -1,10 +1,12 @@
 <?php
 
 require_once(__DIR__ . '/config.php');
+$question_count = 3;
 
-$question_count = 2;
 
 $quiz = new MyApp\Quiz();
+
+$quiz->random();
 
 if (!$quiz->isFinished($question_count)) {
   $data = $quiz->getCurrentQuiz();
