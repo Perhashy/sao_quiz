@@ -1,7 +1,7 @@
 <?php
 
 require_once(__DIR__ . '/config.php');
-$question_count = 2;
+$question_count = 3;
 
 
 $quiz = new MyApp\Quiz();
